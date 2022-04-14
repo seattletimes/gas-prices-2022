@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <%= t.include("partials/_head.html", grunt.data.json) %>
+    <% if (!json.project.embedded) { %>
+      <%= t.include("partials/_dataLayer.html") %>
+      <script src="https://seattle-times.zeustechnology.com/main.js" async></script>
+      <script src="https://www.seattletimes.com/wp-content/plugins/st-advertising/dist/st-projects-bundle.js" async></script>
+    <% } %>
+    <% if (json.project.production && !json.project.embedded) { %>
+      <%= t.include("partials/_gtm.html") %>
+    <% } %>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <% if (json.project.production && !json.project.embedded) { %>
+      <%= t.include("partials/_gtmNoScript.html") %>
+    <% } %>
+    <responsive-child>
+      <!-- content goes here -->
+      <div id="annual" class="toggleBox">
+        <h3 class="graphic-hed">
+            Annual premiums for Washington Gas and Diesel
+        </h3>
+        <h4 class="graphic-chatter">State fee is increasing</h4>
+
+        <div class="directions">Price difference by fuel type</div>
+        <div class="buttons">
+          <button class="gas active">Gas</button>
+          <button class="diesel">Diesel</button>
+        </div>
+
+        <div class="iframes">
+          <div class="iframe gas active">
+            <iframe title="" aria-label="Column Chart" id="datawrapper-chart-ej7EF" src="https://datawrapper.dwcdn.net/ej7EF/6/" scrolling="no" frameborder="0" style="width: 100%; min-width: 100% !important; border: none;" height="500"></iframe>
+          </div>
+          <div class="iframe diesel">
+            <iframe title="Diesel Spread Annual" aria-label="Column Chart" id="datawrapper-chart-dJ74b" src="https://datawrapper.dwcdn.net/dJ74b/4/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="500"></iframe>
+          </div>
+        </div>
+        <figcaption class="source-container">
+          <p class="data-source">Source: <a href="https://zipgate.aaa.com/?area=joinsem&gclid=CjwKCAjw6dmSBhBkEiwA_W-EoL7SHDAQu-v7q6Y2Z68QQRdWmCjgmwA3_--jUfOkJLVAE0FgtMDyvBoCsu4QAvD_BwE" target="_blank" rel="nofollow noreferrer noopener">American Automobile Association</a></p>
+          <p class="art-credit">Lauren Flannery / The Seattle Times</p>
+        </figcaption>
+      </div>
+
+
+
+      <div id="daily" class="toggleBox">
+        <h3 class="graphic-hed">
+            Daily premiums for Washington Gas and Diesel
+        </h3>
+        <h4 class="graphic-chatter">State fee is increasing</h4>
+
+        <div class="directions">Price difference by fuel type</div>
+        <div class="buttons">
+          <button class="gas active">Gas</button>
+          <button class="diesel">Diesel</button>
+        </div>
+
+        <div class="iframes">
+          <div class="iframe gas active">
+            <iframe title="Gas spread daily 2022" aria-label="Column Chart" id="datawrapper-chart-iKxHj" src="https://datawrapper.dwcdn.net/iKxHj/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe>
+          </div>
+          <div class="iframe diesel">
+            <iframe title="Diesel spread daily 2022" aria-label="Column Chart" id="datawrapper-chart-6qrkd" src="https://datawrapper.dwcdn.net/6qrkd/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe>
+          </div>
+        </div>
+        <figcaption class="source-container">
+          <p class="data-source">Source: <a href="https://zipgate.aaa.com/?area=joinsem&gclid=CjwKCAjw6dmSBhBkEiwA_W-EoL7SHDAQu-v7q6Y2Z68QQRdWmCjgmwA3_--jUfOkJLVAE0FgtMDyvBoCsu4QAvD_BwE" target="_blank" rel="nofollow noreferrer noopener">American Automobile Association</a></p>
+          <p class="art-credit">Lauren Flannery / The Seattle Times</p>
+        </figcaption>
+      </div>
+
+
+      <div class="last">
+        <iframe title="National gas and diesel prices" aria-label="Interactive line chart" id="datawrapper-chart-pLv5J" src="https://datawrapper.dwcdn.net/pLv5J/5/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="487"></iframe>
+      </div>
+
+
+
+
+    </responsive-child>
+    <script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();</script>
+
+    <script src="app.js" async></script>
+    <% if (json.project.production) { %>
+    <%= !json.project.embedded ? t.include("partials/_analytics.html") : "" %>
+    <%= t.include("partials/_workHere.html") %>
+    <% } %>
+  </body>
+</html>
