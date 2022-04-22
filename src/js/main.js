@@ -11,8 +11,6 @@ function findAncestor (el, sel) {
 document.querySelectorAll(".toggleBox button").forEach(el => el.addEventListener('click', () => {
   let toggleBox = findAncestor(el, ".toggleBox");
   toggleBox.querySelectorAll("button, .iframe").forEach(el => el.classList.remove("active"));
-  // toggleBox.querySelectorAll(".iframe").forEach(el => el.classList.remove("active");
   let getClass = el.classList[0];
-  // let toggleBox = findAncestor(el, ".toggleBox");
   toggleBox.querySelectorAll(`.iframe.${getClass}, button.${getClass}`).forEach(el => el.classList.add("active"));
 }));

@@ -2,7 +2,7 @@
   "s3": {
     "stage": {
       "bucket": "projects-staging.seattletimes.com",
-      "path": "grammatical-addiction"
+      "path": "grammatical-addiction-2"
     },
     "live": {
       "bucket": "projects.seattletimes.com",

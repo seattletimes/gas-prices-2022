@@ -33,8 +33,9 @@ responsive-child {
 
   .buttons {
     font-size: 0px;
+    margin-bottom: 10px;
     button {
-      background-color: rgba(7, 119, 179, 0.6);
+      // background-color: rgba(7, 119, 179, 0.6);
       color: white;
       border-radius: 3px;
       border: none;
@@ -48,16 +49,17 @@ responsive-child {
       cursor: pointer;
 
       &.active {
-        background-color: @df-blue;
+        // background-color: @df-blue;
+        border: 3px solid black;
       }
     }
-    button:first-of-type { margin-right: 1%; }
-    button:nth-child(2) { margin-left: 1%; }
+    button:first-of-type { margin-right: 1%; background-color: @df-blue; }
+    button:nth-child(2) { margin-left: 1%; background-color: #02496f; }
   }
 
   .iframes {
     position: relative;
-    height: 500px;
+    height: 400px;
     .iframe {
       width: 100%;
       position: absolute;
@@ -70,3 +72,30 @@ responsive-child {
     }
   }
 }
+
+// /* The slider */
+// .holdSlider {
+//   position: relative;
+//   height: 20px;
+//   width: 98%;
+//   margin: 7px auto 7px auto;
+//   .slider {
+//     position: absolute;
+//     cursor: pointer;
+//     width: 48%;
+//     height: 7px;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     background-color: black;
+//     -webkit-transition: .4s;
+//     transition: .4s;
+//
+//     &.diesel {
+//       -webkit-transform: translateX(108%);
+//       -ms-transform: translateX(108%);
+//       transform: translateX(108%);
+//     }
+//   }
+// }
