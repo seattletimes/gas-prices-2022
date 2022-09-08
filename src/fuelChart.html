@@ -19,25 +19,26 @@
     <% } %>
     <responsive-child>
       <!-- content goes here -->
-      <div class="last">
+      <div id="daily" class="toggleBox">
         <h3 class="graphic-hed">
-            Washington residents pay more at the pump
+          Gap fluctuates in 2022 between Washington and national average fuel prices
         </h3>
-        <h4 class="graphic-chatter">The difference &mdash; or spread &mdash; between average regular gas prices per gallon in Washington compared to the national averages peaked in 2019 and remains high.</h4>
+        <h4 class="graphic-chatter">Spreads narrowed earlier in the year, then rose sharply after the Russian invasion of Ukraine.</h4>
 
-        <div class="iframe diesel" >
-          <iframe title="Annual difference" aria-label="Interactive line chart" id="datawrapper-chart-EzrFx" src="https://datawrapper.dwcdn.net/EzrFx/11/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe>
+        <div class="directions">Select by fuel type</div>
+        <div class="buttons">
+          <button class="gas active">Regular gas</button>
+          <button class="diesel">Diesel</button>
         </div>
 
-        <h3 class="graphic-hed" style="margin-top: 2em; margin-bottom: 0px; ">
-            U.S.- WA regular gas price difference over time
-        </h3>
-
-        <div class="iframe gas active">
-          <iframe title="" aria-label="Column Chart" id="datawrapper-chart-ej7EF" src="https://datawrapper.dwcdn.net/ej7EF/13/" scrolling="no" frameborder="0" style="width: 100%; min-width: 100% !important; border: none;" height="500"></iframe>
+        <div class="iframes">
+          <div class="iframe gas active">
+            <iframe title="Gas spread daily 2022" aria-label="Column Chart" id="datawrapper-chart-iKxHj" src="https://datawrapper.dwcdn.net/iKxHj/8/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe>
+          </div>
+          <div class="iframe diesel">
+            <iframe title="Diesel spread daily 2022" aria-label="Column Chart" id="datawrapper-chart-6qrkd" src="https://datawrapper.dwcdn.net/6qrkd/6/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe>
+          </div>
         </div>
-
-
         <figcaption class="source-container">
           <p class="data-source">Source: AAA</p>
           <p class="art-credit">Lauren Flannery / The Seattle Times</p>

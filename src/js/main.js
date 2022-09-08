@@ -8,9 +8,12 @@ function findAncestor (el, sel) {
     return el;
 }
 
-document.querySelectorAll(".toggleBox button").forEach(el => el.addEventListener('click', () => {
-  let toggleBox = findAncestor(el, ".toggleBox");
-  toggleBox.querySelectorAll("button, .iframe").forEach(el => el.classList.remove("active"));
-  let getClass = el.classList[0];
-  toggleBox.querySelectorAll(`.iframe.${getClass}, button.${getClass}`).forEach(el => el.classList.add("active"));
-}));
+if (document.querySelector("#daily")) {
+  document.querySelectorAll(".toggleBox button").forEach(el => el.addEventListener('click', () => {
+    let toggleBox = findAncestor(el, ".toggleBox");
+    toggleBox.querySelectorAll("button, .iframe").forEach(el => el.classList.remove("active"));
+    let getClass = el.classList[0];
+    toggleBox.querySelectorAll(`.iframe.${getClass}, button.${getClass}`).forEach(el => el.classList.add("active"));
+  }));
+
+} else {}

@@ -6,7 +6,7 @@
     },
     "live": {
       "bucket": "projects.seattletimes.com",
-      "path": ""
+      "path": "2022/local/gas-prices-for-washington-residents"
     }
   },
   "title": "",
@@ -18,5 +18,5 @@
   "sheets": [],
   "docs": [],
   "embedded": true,
-  "production": false
+  "production": true
 }
